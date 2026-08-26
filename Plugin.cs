@@ -39,6 +39,10 @@ namespace TNRD.Zeepkist.ObjectProperties
 
         private void HandlePostfix(LEV_InspectorGUICreator guiCreator)
         {
+            Transform existingExtra = guiCreator.advancedProperties.transform.Find("ExtraProperties");
+            if (existingExtra != null)
+                Destroy(existingExtra.gameObject);
+
             guiCreator.isAdvanced = true;
             guiCreator.bridge.GetBlockProperties().linkScalingAxes = false;
             guiCreator.linkedImage.gameObject.SetActive(false);

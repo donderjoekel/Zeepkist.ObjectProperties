@@ -4,11 +4,11 @@ using JetBrains.Annotations;
 
 namespace TNRD.Zeepkist.ObjectProperties.Patches;
 
-[HarmonyPatch(typeof(LEV_InspectorGUICreator), nameof(LEV_InspectorGUICreator.CreateGUI))]
+[HarmonyPatch(typeof(LEV_InspectorGUICreator), nameof(LEV_InspectorGUICreator.CreateGUI_v18))]
 public class LEV_InspectorGUICreator_CreateGUI
 {
     public static event Action<LEV_InspectorGUICreator> OnPostfix;
-        
+
     [UsedImplicitly]
     public static void Postfix(LEV_InspectorGUICreator __instance)
     {
