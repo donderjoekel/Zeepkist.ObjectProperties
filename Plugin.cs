@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
-using System.Security.Cryptography;
 using BepInEx;
 using HarmonyLib;
 using I2.Loc;
